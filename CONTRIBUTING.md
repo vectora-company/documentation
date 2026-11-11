@@ -1,7 +1,7 @@
 # Contributing to Vectora Documentation
 
-Thanks for helping improve the public documentation site. The project uses
-Hugo Extended with Hextra and publishes with GitHub Pages.
+Thanks for helping improve the public documentation site. The project uses Hugo Extended with Hextra
+and publishes with GitHub Pages.
 
 ## Prerequisites
 
@@ -22,8 +22,8 @@ The generated `public/` directory is a build artifact; do not commit it.
 - Write and maintain pages in English and Brazilian Portuguese.
 - Keep the two language versions consistent.
 - Document only public open-source repositories in the Vectora organization.
-- Do not add material about private repositories, internal services, secrets,
-  or non-public endpoints.
+- Do not add material about private repositories, internal services, secrets, or non-public
+  endpoints.
 - Keep the home page placeholders empty until content is approved.
 
 ## Pull requests

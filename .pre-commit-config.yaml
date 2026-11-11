@@ -26,6 +26,13 @@ repos:
 
   - repo: local
     hooks:
+      - id: prettier-markdown
+        name: Format Markdown with Prettier
+        entry: prettier --write
+        language: node
+        additional_dependencies: [prettier@3.9.6]
+        types: [markdown]
+
       - id: hugo-production-build
         name: Build the Hugo site
         entry: hugo --gc --minify --environment production
