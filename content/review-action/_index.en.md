@@ -7,4 +7,5 @@ cascade:
   type: docs
 ---
 
-Source code and contributions: [Review Action on GitHub](https://github.com/vectora-ltda/review-action).
+Source code and contributions:
+[Review Action on GitHub](https://github.com/vectora-ltda/review-action).
