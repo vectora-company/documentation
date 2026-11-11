@@ -11,7 +11,7 @@ própria seção de documentação.
 
 ## Vectora
 
-![Vectora — assistente de desenvolvimento com IA](/vectora-banner.svg)
+![Vectora — assistente de desenvolvimento com IA](/vectora/vectora-banner.svg)
 
 Um workspace open source e auto-hospedado para desenvolvimento de software,
 com agente de IA, ferramentas, workbenches e conhecimento do workspace.
@@ -22,7 +22,7 @@ com agente de IA, ferramentas, workbenches e conhecimento do workspace.
 
 ## GH Bot
 
-![GH Bot — automação no GitHub](/gh-bot-banner.svg)
+![GH Bot — automação no GitHub](/gh-bot/gh-bot-banner.svg)
 
 Um bot auto-hospedado para revisão de pull requests e automação de
 repositórios, com dashboard e CLI para configurar seu comportamento.
@@ -33,7 +33,7 @@ repositórios, com dashboard e CLI para configurar seu comportamento.
 
 ## Engine
 
-![Engine — runtime e framework agêntico em Rust](/engine-banner.svg)
+![Engine — runtime e framework agêntico em Rust](/engine/engine-banner.svg)
 
 Um runtime e framework agêntico reutilizável em Rust, com bindings para Python
 e TypeScript, criado para compartilhar capacidades centrais entre produtos.
@@ -44,7 +44,7 @@ e TypeScript, criado para compartilhar capacidades centrais entre produtos.
 
 ## Vext
 
-![Vext — extensões e SDKs](/vext-banner.svg)
+![Vext — extensões e SDKs](/vext/vext-banner.svg)
 
 O ecossistema de extensões dos produtos Vectora: contratos compartilhados,
 SDKs, schemas e extensões oficiais. O projeto está em alfa.
@@ -55,7 +55,7 @@ SDKs, schemas e extensões oficiais. O projeto está em alfa.
 
 ## Vext Action
 
-![Vext Action — GitHub Actions para Vext](/vext-action-banner.svg)
+![Vext Action — GitHub Actions para Vext](/vext-action/vext-action-banner.svg)
 
 Projeto de GitHub Actions para workflows do ecossistema Vext. A documentação
 de uso será incluída quando a interface pública do projeto estiver definida.
@@ -66,7 +66,7 @@ de uso será incluída quando a interface pública do projeto estiver definida.
 
 ## Review Action
 
-![Review Action — revisão de pull requests no GitHub](/review-action-banner.svg)
+![Review Action — revisão de pull requests no GitHub](/review-action/review-action-banner.svg)
 
 Uma GitHub Action que conecta workflows de pull request à revisão do Vectora
 Bot, com execução hospedada ou auto-hospedada.
