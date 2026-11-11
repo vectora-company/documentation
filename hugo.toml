@@ -101,7 +101,7 @@ disableKinds = ['taxonomy', 'term']
 [params]
   title = 'Vectora Documentation'
   description = 'Official documentation for Vectora Ltda. open-source projects.'
-  images = ['https://docs.vectora.company/vectora.svg']
+  images = ['https://docs.vectora.company/favicon.png']
 
 [params.author]
   name = 'Vectora Ltda.'
