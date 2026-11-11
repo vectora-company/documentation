@@ -8,4 +8,4 @@ cascade:
 ---
 
 Source code and contributions:
-[Review Action on GitHub](https://github.com/vectora-ltda/review-action).
+[Review Action on GitHub](https://github.com/vectora-company/review-action).

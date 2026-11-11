@@ -18,7 +18,7 @@ tools, workbenches, and workspace knowledge.
 
 **Tags:** `AI assistant` · `developer tools` · `self-hosted` · `Python` · `TypeScript`
 
-[GitHub repository](https://github.com/vectora-ltda/vectora) · [Read the documentation](vectora/)
+[GitHub repository](https://github.com/vectora-company/vectora) · [Read the documentation](vectora/)
 
 ## GH Bot
 
@@ -29,7 +29,7 @@ for configuring its behavior.
 
 **Tags:** `GitHub bot` · `code review` · `automation` · `self-hosted` · `TypeScript`
 
-[GitHub repository](https://github.com/vectora-ltda/gh-bot) · [Read the documentation](gh-bot/)
+[GitHub repository](https://github.com/vectora-company/gh-bot) · [Read the documentation](gh-bot/)
 
 ## Engine
 
@@ -40,7 +40,7 @@ core agent capabilities across products.
 
 **Tags:** `agent runtime` · `framework` · `Rust` · `Python` · `TypeScript`
 
-[GitHub repository](https://github.com/vectora-ltda/engine) · [Read the documentation](engine/)
+[GitHub repository](https://github.com/vectora-company/engine) · [Read the documentation](engine/)
 
 ## Vext
 
@@ -51,7 +51,7 @@ official extensions. The project is in alpha.
 
 **Tags:** `extensions` · `SDK` · `JSON-RPC` · `TypeScript` · `Python`
 
-[GitHub repository](https://github.com/vectora-ltda/vext) · [Read the documentation](vext/)
+[GitHub repository](https://github.com/vectora-company/vext) · [Read the documentation](vext/)
 
 ## Vext Action
 
@@ -62,7 +62,7 @@ will be added as its public interface is established.
 
 **Tags:** `GitHub Actions` · `Vext` · `automation`
 
-[GitHub repository](https://github.com/vectora-ltda/vext-action) ·
+[GitHub repository](https://github.com/vectora-company/vext-action) ·
 [Read the documentation](vext-action/)
 
 ## Review Action
@@ -74,5 +74,5 @@ self-hosted execution paths.
 
 **Tags:** `GitHub Action` · `pull requests` · `code review` · `hosted` · `self-hosted`
 
-[GitHub repository](https://github.com/vectora-ltda/review-action) ·
+[GitHub repository](https://github.com/vectora-company/review-action) ·
 [Read the documentation](review-action/)

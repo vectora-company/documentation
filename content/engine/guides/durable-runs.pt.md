@@ -34,8 +34,8 @@ decisão de reconciliação e só então informa à engine um resultado conhecid
 
 Planeje retenção, backup, permissões do arquivo SQLite e redação de payloads na aplicação host.
 Consulte os contratos de
-[lifecycle](https://github.com/vectora-ltda/engine/blob/main/docs/specs/08-run-lifecycle.md),
-[loop](https://github.com/vectora-ltda/engine/blob/main/docs/specs/11-model-tool-loop.md),
-[ledger SQLite](https://github.com/vectora-ltda/engine/blob/main/docs/specs/14-sqlite-durable-run-lifecycle.md)
+[lifecycle](https://github.com/vectora-company/engine/blob/main/docs/specs/08-run-lifecycle.md),
+[loop](https://github.com/vectora-company/engine/blob/main/docs/specs/11-model-tool-loop.md),
+[ledger SQLite](https://github.com/vectora-company/engine/blob/main/docs/specs/14-sqlite-durable-run-lifecycle.md)
 e
-[ledger resiliente](https://github.com/vectora-ltda/engine/blob/main/docs/specs/02-storage-memoria-contexto-rag.md).
+[ledger resiliente](https://github.com/vectora-company/engine/blob/main/docs/specs/02-storage-memoria-contexto-rag.md).

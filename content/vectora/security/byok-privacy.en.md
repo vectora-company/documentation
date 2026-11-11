@@ -38,5 +38,5 @@ obligations.
 ## Report a vulnerability
 
 Use the channel in the
-[security policy](https://github.com/vectora-ltda/vectora/blob/master/SECURITY.md); do not publish
-exploitable details in a public issue.
+[security policy](https://github.com/vectora-company/vectora/blob/master/SECURITY.md); do not
+publish exploitable details in a public issue.

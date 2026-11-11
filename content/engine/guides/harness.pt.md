@@ -46,8 +46,8 @@ testes ou CI, não busca artifacts referenciados nem verifica se a alegação de
 verdadeira. SQLite pode persistir a verificação junto ao lifecycle ou loop por operações separadas.
 
 Contratos detalhados:
-[`10-tool-contracts-e-dispatch.md`](https://github.com/vectora-ltda/engine/blob/main/docs/specs/10-tool-contracts-e-dispatch.md),
-[`11-model-tool-loop.md`](https://github.com/vectora-ltda/engine/blob/main/docs/specs/11-model-tool-loop.md),
-[`12-policy-and-approval.md`](https://github.com/vectora-ltda/engine/blob/main/docs/specs/12-policy-and-approval.md)
+[`10-tool-contracts-e-dispatch.md`](https://github.com/vectora-company/engine/blob/main/docs/specs/10-tool-contracts-e-dispatch.md),
+[`11-model-tool-loop.md`](https://github.com/vectora-company/engine/blob/main/docs/specs/11-model-tool-loop.md),
+[`12-policy-and-approval.md`](https://github.com/vectora-company/engine/blob/main/docs/specs/12-policy-and-approval.md)
 e
-[`15-verification-gates.md`](https://github.com/vectora-ltda/engine/blob/main/docs/specs/15-verification-gates.md).
+[`15-verification-gates.md`](https://github.com/vectora-company/engine/blob/main/docs/specs/15-verification-gates.md).

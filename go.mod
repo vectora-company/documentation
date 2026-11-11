@@ -1,4 +1,4 @@
-module github.com/vectora-ltda/documentation
+module github.com/vectora-company/documentation
 
 go 1.26.1
 

@@ -18,5 +18,5 @@ not let model text masquerade as trusted evidence: the host must create reports 
 results and enforce gate rules before completing the run.
 
 See the
-[`15-verification-gates.md`](https://github.com/vectora-ltda/engine/blob/main/docs/specs/15-verification-gates.md)
+[`15-verification-gates.md`](https://github.com/vectora-company/engine/blob/main/docs/specs/15-verification-gates.md)
 contract and the [maturity](../../concepts/maturity/) reference.

@@ -4,8 +4,8 @@ description: Fluxo do repositório e orientação para contribuição.
 weight: 6
 ---
 
-Comece pelo [`CONTRIBUTING.md`](https://github.com/vectora-ltda/engine/blob/main/CONTRIBUTING.md) e
-pelo [`AGENTS.md`](https://github.com/vectora-ltda/engine/blob/main/AGENTS.md). A implementação
+Comece pelo [`CONTRIBUTING.md`](https://github.com/vectora-company/engine/blob/main/CONTRIBUTING.md)
+e pelo [`AGENTS.md`](https://github.com/vectora-company/engine/blob/main/AGENTS.md). A implementação
 canônica Rust e os bindings Python/TypeScript devem permanecer alinhados por testes de contrato.
 Prefira mudanças incrementais de capability com limites explícitos de fallback e rollback.
 

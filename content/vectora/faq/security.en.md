@@ -22,5 +22,5 @@ and sandbox controls. The availability of each protection depends on platform an
 the [security](../../security/) and [workspace](../../getting-started/first-workspace) guides.
 
 **Where do I report a vulnerability?** Follow the repository's
-[security policy](https://github.com/vectora-ltda/vectora/blob/master/SECURITY.md) instead of
+[security policy](https://github.com/vectora-company/vectora/blob/master/SECURITY.md) instead of
 publishing details in an issue.

@@ -30,7 +30,7 @@ retention, ACLs, or access policy.
 
 Python and TypeScript interfaces mirror Rust functions through bindings. See the
 [capability matrix](../../reference/capabilities/) and contracts
-[`07-embeddings-rerank.md`](https://github.com/vectora-ltda/engine/blob/main/docs/specs/07-embeddings-rerank.md)
+[`07-embeddings-rerank.md`](https://github.com/vectora-company/engine/blob/main/docs/specs/07-embeddings-rerank.md)
 and
-[`02-storage-memoria-contexto-rag.md`](https://github.com/vectora-ltda/engine/blob/main/docs/specs/02-storage-memoria-contexto-rag.md)
+[`02-storage-memoria-contexto-rag.md`](https://github.com/vectora-company/engine/blob/main/docs/specs/02-storage-memoria-contexto-rag.md)
 before relying on schema details.

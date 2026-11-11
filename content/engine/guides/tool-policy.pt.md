@@ -26,6 +26,6 @@ humana; a engine não autentica usuários, não assina recibos e não executa ad
 
 Não reutilize grants após alteração de argumentos, escopo, chamada, run ou policy. Expiração,
 revogação e replay precisam ser tratados conforme o contrato versionado e pelo host. Veja
-[`12-policy-and-approval.md`](https://github.com/vectora-ltda/engine/blob/main/docs/specs/12-policy-and-approval.md)
+[`12-policy-and-approval.md`](https://github.com/vectora-company/engine/blob/main/docs/specs/12-policy-and-approval.md)
 e
-[`16-sqlite-durable-tool-policy.md`](https://github.com/vectora-ltda/engine/blob/main/docs/specs/16-sqlite-durable-tool-policy.md).
+[`16-sqlite-durable-tool-policy.md`](https://github.com/vectora-company/engine/blob/main/docs/specs/16-sqlite-durable-tool-policy.md).

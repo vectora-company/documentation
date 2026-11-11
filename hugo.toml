@@ -32,7 +32,7 @@ cleanDestinationDir = true
     [[languages.en.menu.main]]
       identifier = 'organization'
       name = 'GitHub organization'
-      url = 'https://github.com/vectora-ltda'
+      url = 'https://github.com/vectora-company'
       weight = 1
     [[languages.en.menu.main]]
       identifier = 'language-switch'
@@ -60,7 +60,7 @@ cleanDestinationDir = true
     [[languages.pt.menu.main]]
       identifier = 'organization'
       name = 'Organização no GitHub'
-      url = 'https://github.com/vectora-ltda'
+      url = 'https://github.com/vectora-company'
       weight = 1
     [[languages.pt.menu.main]]
       identifier = 'language-switch'

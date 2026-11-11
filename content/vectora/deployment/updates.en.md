@@ -11,7 +11,7 @@ and downloads the package without installing it immediately. Installation is app
 exits. Users can control automatic checks in preferences and start a manual check.
 
 Behavior can depend on operating system, installed package format, and published channel. See
-[GitHub releases](https://github.com/vectora-ltda/vectora/releases) for available versions and
+[GitHub releases](https://github.com/vectora-company/vectora/releases) for available versions and
 artifacts.
 
 ## Source builds

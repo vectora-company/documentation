@@ -34,6 +34,6 @@ product secret manager, product rate limiter, or general plugin runtime.
 
 See [architecture and host responsibilities](../../concepts/architecture/),
 [tool policy and approvals](../tool-policy/), and the
-[chat](https://github.com/vectora-ltda/engine/blob/main/docs/specs/03-chat-openai-compatible.md) and
-[fallback](https://github.com/vectora-ltda/engine/blob/main/docs/specs/06-chat-fallback.md)
+[chat](https://github.com/vectora-company/engine/blob/main/docs/specs/03-chat-openai-compatible.md)
+and [fallback](https://github.com/vectora-company/engine/blob/main/docs/specs/06-chat-fallback.md)
 contracts.

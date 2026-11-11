@@ -12,7 +12,7 @@ aplicativo. O usuário pode controlar a verificação automática nas preferênc
 verificação manual.
 
 O comportamento pode depender do sistema operacional, do formato instalado e do canal publicado.
-Consulte as [releases do GitHub](https://github.com/vectora-ltda/vectora/releases) para conferir
+Consulte as [releases do GitHub](https://github.com/vectora-company/vectora/releases) para conferir
 versões e artefatos disponíveis.
 
 ## Build do código-fonte

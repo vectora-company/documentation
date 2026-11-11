@@ -7,4 +7,4 @@ cascade:
   type: docs
 ---
 
-Código-fonte e contribuições: [GH Bot no GitHub](https://github.com/vectora-ltda/gh-bot).
+Código-fonte e contribuições: [GH Bot no GitHub](https://github.com/vectora-company/gh-bot).

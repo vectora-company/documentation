@@ -30,7 +30,7 @@ request = {
 ```
 
 The exact settings schema is defined in
-[`03-chat-openai-compatible.md`](https://github.com/vectora-ltda/engine/blob/main/docs/specs/03-chat-openai-compatible.md).
+[`03-chat-openai-compatible.md`](https://github.com/vectora-company/engine/blob/main/docs/specs/03-chat-openai-compatible.md).
 Keep credentials outside source and logs. The engine redacts keys and does not read `.env` files.
 
 ## Streaming

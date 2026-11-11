@@ -73,5 +73,5 @@ Rust consumers use the canonical typed API in crate modules. These language surf
 guaranteed to expose every internal Rust type. PostgreSQL is currently exposed through the
 local-first resilient ledger operation; direct PostgreSQL ledger connection APIs remain Rust-only.
 For full input/output schemas, error codes, and version rules, consult the
-[contract specifications in the source repository](https://github.com/vectora-ltda/engine/tree/main/docs/specs)
+[contract specifications in the source repository](https://github.com/vectora-company/engine/tree/main/docs/specs)
 and the binding READMEs.

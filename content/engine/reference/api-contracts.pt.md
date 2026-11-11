@@ -74,5 +74,5 @@ Consumidores Rust usam a API tipada canônica nos módulos do crate. Essas super
 não prometem expor todos os tipos internos Rust. PostgreSQL é exposto atualmente pela operação de
 ledger local-first resiliente; a conexão direta ao ledger PostgreSQL permanece apenas em Rust. Para
 schemas completos, códigos de erro e regras de versão, consulte as
-[especificações de contrato no repositório](https://github.com/vectora-ltda/engine/tree/main/docs/specs)
+[especificações de contrato no repositório](https://github.com/vectora-company/engine/tree/main/docs/specs)
 e os READMEs dos bindings.
