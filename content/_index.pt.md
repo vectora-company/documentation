@@ -1,5 +1,5 @@
 ---
-title: Documentação Vectora
+title: Vectora Docs
 description: Documentação oficial dos projetos open source da Vectora Ltda.
 type: docs
 ---

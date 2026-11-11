@@ -1,7 +1,9 @@
 {
-  "name": "Vectora Documentation",
+  "name": "Vectora Docs",
   "short_name": "Vectora Docs",
   "start_url": "/",
+  "scope": "/",
+  "description": "Official documentation for Vectora Ltda. open-source projects.",
   "display": "standalone",
   "background_color": "#0A0F1F",
   "theme_color": "#0A0F1F",
