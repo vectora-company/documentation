@@ -1,0 +1,34 @@
+default_language_version:
+  node: system
+default_stages: [pre-commit]
+minimum_pre_commit_version: 4.0.0
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-json
+      - id: check-toml
+      - id: check-merge-conflict
+      - id: check-added-large-files
+        args: [--maxkb=5000]
+      - id: detect-private-key
+
+  - repo: https://github.com/rhysd/actionlint
+    rev: v1.7.12
+    hooks:
+      - id: actionlint
+        files: ^\.github/workflows/.*\.ya?ml$
+
+  - repo: local
+    hooks:
+      - id: hugo-production-build
+        name: Build the Hugo site
+        entry: hugo --gc --minify --environment production
+        language: system
+        pass_filenames: false
+        files: ^(content/|layouts/|static/|hugo\.toml$|go\.(mod|sum)$)
