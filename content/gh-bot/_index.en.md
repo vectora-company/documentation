@@ -6,3 +6,5 @@ weight: 2
 cascade:
   type: docs
 ---
+
+Source code and contributions: [GH Bot on GitHub](https://github.com/vectora-ltda/gh-bot).

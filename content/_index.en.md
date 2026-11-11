@@ -18,7 +18,7 @@ an agent, development tools, workbenches, and workspace knowledge.
 
 **Tags:** `AI assistant` · `developer tools` · `self-hosted` · `Python` · `TypeScript`
 
-[Read Vectora documentation](vectora/)
+[GitHub repository](https://github.com/vectora-ltda/vectora) · [Read the documentation](vectora/)
 
 ## GH Bot
 
@@ -29,7 +29,7 @@ with a dashboard and CLI for configuring its behavior.
 
 **Tags:** `GitHub bot` · `code review` · `automation` · `self-hosted` · `TypeScript`
 
-[Read GH Bot documentation](gh-bot/)
+[GitHub repository](https://github.com/vectora-ltda/gh-bot) · [Read the documentation](gh-bot/)
 
 ## Engine
 
@@ -40,7 +40,7 @@ designed to share core agent capabilities across products.
 
 **Tags:** `agent runtime` · `framework` · `Rust` · `Python` · `TypeScript`
 
-[Read Engine documentation](engine/)
+[GitHub repository](https://github.com/vectora-ltda/engine) · [Read the documentation](engine/)
 
 ## Vext
 
@@ -51,7 +51,7 @@ SDKs, schemas, and official extensions. The project is in alpha.
 
 **Tags:** `extensions` · `SDK` · `JSON-RPC` · `TypeScript` · `Python`
 
-[Read Vext documentation](vext/)
+[GitHub repository](https://github.com/vectora-ltda/vext) · [Read the documentation](vext/)
 
 ## Vext Action
 
@@ -62,7 +62,7 @@ usage documentation will be added as its public interface is established.
 
 **Tags:** `GitHub Actions` · `Vext` · `automation`
 
-[Read Vext Action documentation](vext-action/)
+[GitHub repository](https://github.com/vectora-ltda/vext-action) · [Read the documentation](vext-action/)
 
 ## Review Action
 
@@ -73,4 +73,4 @@ with hosted and self-hosted execution paths.
 
 **Tags:** `GitHub Action` · `pull requests` · `code review` · `hosted` · `self-hosted`
 
-[Read Review Action documentation](review-action/)
+[GitHub repository](https://github.com/vectora-ltda/review-action) · [Read the documentation](review-action/)

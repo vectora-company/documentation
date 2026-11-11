@@ -18,7 +18,7 @@ com agente de IA, ferramentas, workbenches e conhecimento do workspace.
 
 **Tags:** `assistente de IA` · `ferramentas de desenvolvimento` · `self-hosted` · `Python` · `TypeScript`
 
-[Ler a documentação do Vectora](vectora/)
+[Repositório no GitHub](https://github.com/vectora-ltda/vectora) · [Ler a documentação](vectora/)
 
 ## GH Bot
 
@@ -29,7 +29,7 @@ repositórios, com dashboard e CLI para configurar seu comportamento.
 
 **Tags:** `bot do GitHub` · `revisão de código` · `automação` · `self-hosted` · `TypeScript`
 
-[Ler a documentação do GH Bot](gh-bot/)
+[Repositório no GitHub](https://github.com/vectora-ltda/gh-bot) · [Ler a documentação](gh-bot/)
 
 ## Engine
 
@@ -40,7 +40,7 @@ e TypeScript, criado para compartilhar capacidades centrais entre produtos.
 
 **Tags:** `agent runtime` · `framework` · `Rust` · `Python` · `TypeScript`
 
-[Ler a documentação da Engine](engine/)
+[Repositório no GitHub](https://github.com/vectora-ltda/engine) · [Ler a documentação](engine/)
 
 ## Vext
 
@@ -51,7 +51,7 @@ SDKs, schemas e extensões oficiais. O projeto está em alfa.
 
 **Tags:** `extensões` · `SDK` · `JSON-RPC` · `TypeScript` · `Python`
 
-[Ler a documentação do Vext](vext/)
+[Repositório no GitHub](https://github.com/vectora-ltda/vext) · [Ler a documentação](vext/)
 
 ## Vext Action
 
@@ -62,7 +62,7 @@ de uso será incluída quando a interface pública do projeto estiver definida.
 
 **Tags:** `GitHub Actions` · `Vext` · `automação`
 
-[Ler a documentação do Vext Action](vext-action/)
+[Repositório no GitHub](https://github.com/vectora-ltda/vext-action) · [Ler a documentação](vext-action/)
 
 ## Review Action
 
@@ -73,4 +73,4 @@ Bot, com execução hospedada ou auto-hospedada.
 
 **Tags:** `GitHub Action` · `pull requests` · `revisão de código` · `hospedado` · `self-hosted`
 
-[Ler a documentação do Review Action](review-action/)
+[Repositório no GitHub](https://github.com/vectora-ltda/review-action) · [Ler a documentação](review-action/)

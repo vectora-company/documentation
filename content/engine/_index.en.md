@@ -6,3 +6,5 @@ weight: 3
 cascade:
   type: docs
 ---
+
+Source code and contributions: [Engine on GitHub](https://github.com/vectora-ltda/engine).
