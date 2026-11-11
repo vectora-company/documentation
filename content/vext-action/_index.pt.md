@@ -7,4 +7,5 @@ cascade:
   type: docs
 ---
 
-Código-fonte e contribuições: [Vext Action no GitHub](https://github.com/vectora-ltda/vext-action).
+Código-fonte e contribuições:
+[Vext Action no GitHub](https://github.com/vectora-company/vext-action).

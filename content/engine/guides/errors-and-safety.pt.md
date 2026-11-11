@@ -35,5 +35,5 @@ rate limiter de produto ou runtime geral de plugins.
 
 Veja [arquitetura e responsabilidades do host](../../concepts/architecture/),
 [política e aprovações](../tool-policy/) e os contratos de
-[chat](https://github.com/vectora-ltda/engine/blob/main/docs/specs/03-chat-openai-compatible.md) e
-[fallback](https://github.com/vectora-ltda/engine/blob/main/docs/specs/06-chat-fallback.md).
+[chat](https://github.com/vectora-company/engine/blob/main/docs/specs/03-chat-openai-compatible.md)
+e [fallback](https://github.com/vectora-company/engine/blob/main/docs/specs/06-chat-fallback.md).

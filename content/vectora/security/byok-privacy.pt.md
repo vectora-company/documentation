@@ -38,5 +38,5 @@ de enviar dados pessoais. O Vectora não substitui essa avaliação nem as obrig
 ## Relatar uma vulnerabilidade
 
 Use o canal descrito na
-[política de segurança](https://github.com/vectora-ltda/vectora/blob/master/SECURITY.md); não
+[política de segurança](https://github.com/vectora-company/vectora/blob/master/SECURITY.md); não
 publique detalhes exploráveis em uma issue pública.

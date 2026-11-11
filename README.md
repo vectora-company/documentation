@@ -1,7 +1,7 @@
 # Vectora Documentation
 
 Official documentation site for the open-source projects maintained by the
-[Vectora organization](https://github.com/vectora-ltda). The site is built with
+[Vectora organization](https://github.com/vectora-company). The site is built with
 [Hugo](https://gohugo.io/) and [Hextra](https://imfing.github.io/hextra/) and is published at
 <https://docs.vectora.company/> through GitHub Pages.
 

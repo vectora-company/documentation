@@ -26,6 +26,6 @@ does not authenticate users, sign receipts, or execute adapters.
 
 Do not reuse grants after arguments, scope, call, run, or policy changes. Handle expiration,
 revocation, and replay according to the versioned contract and in the host. See
-[`12-policy-and-approval.md`](https://github.com/vectora-ltda/engine/blob/main/docs/specs/12-policy-and-approval.md)
+[`12-policy-and-approval.md`](https://github.com/vectora-company/engine/blob/main/docs/specs/12-policy-and-approval.md)
 and
-[`16-sqlite-durable-tool-policy.md`](https://github.com/vectora-ltda/engine/blob/main/docs/specs/16-sqlite-durable-tool-policy.md).
+[`16-sqlite-durable-tool-policy.md`](https://github.com/vectora-company/engine/blob/main/docs/specs/16-sqlite-durable-tool-policy.md).

@@ -9,8 +9,9 @@ ou Node para usar o aplicativo desktop.
 
 ## Instalar a versão publicada
 
-Abra a página de [releases do Vectora no GitHub](https://github.com/vectora-ltda/vectora/releases) e
-escolha um artefato compatível com o seu sistema e arquitetura. A matriz publicada atualmente cobre:
+Abra a página de
+[releases do Vectora no GitHub](https://github.com/vectora-company/vectora/releases) e escolha um
+artefato compatível com o seu sistema e arquitetura. A matriz publicada atualmente cobre:
 
 | Sistema | Arquitetura publicada | Formatos disponíveis        |
 | ------- | --------------------- | --------------------------- |
@@ -31,14 +32,14 @@ artefato e devem ser verificadas nas informações da release.
 ## Executar a partir do código-fonte
 
 Use este caminho para desenvolvimento ou para inspecionar/modificar o projeto. Consulte também o
-[guia de contribuição](https://github.com/vectora-ltda/vectora/blob/master/CONTRIBUTING.md).
+[guia de contribuição](https://github.com/vectora-company/vectora/blob/master/CONTRIBUTING.md).
 
 **Pré-requisitos:** [uv](https://docs.astral.sh/uv/), Python 3.13, Node.js 26 e pnpm 11.5. No Linux,
 o script `dotfiles.sh` identifica a distribuição e prepara a toolchain e as dependências nativas;
 ele para em Windows/macOS.
 
 ```bash
-git clone https://github.com/vectora-ltda/vectora.git
+git clone https://github.com/vectora-company/vectora.git
 cd vectora
 
 # ./dotfiles.sh  # opcional: prepara a toolchain Linux
@@ -86,7 +87,7 @@ Routing**, conforme o tipo de provider, ou por variáveis de ambiente. Leia
 
 ## Licença e serviços
 
-O código está sob [AGPL-3.0](https://github.com/vectora-ltda/vectora/blob/master/LICENSE). O uso
+O código está sob [AGPL-3.0](https://github.com/vectora-company/vectora/blob/master/LICENSE). O uso
 local individual é gratuito; recursos que dependem dos serviços pagos podem exigir uma conta ou uma
 assinatura Pro ativa. Isso não altera os termos da licença do código.
 

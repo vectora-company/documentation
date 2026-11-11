@@ -19,5 +19,5 @@ deve criar reports a partir dos resultados observados e aplicar as regras de gat
 a execução.
 
 Veja a spec
-[`15-verification-gates.md`](https://github.com/vectora-ltda/engine/blob/main/docs/specs/15-verification-gates.md)
+[`15-verification-gates.md`](https://github.com/vectora-company/engine/blob/main/docs/specs/15-verification-gates.md)
 e a matriz de [maturidade](../../concepts/maturity/).

@@ -9,8 +9,8 @@ the desktop app.
 
 ## Install a published release
 
-Open the [Vectora GitHub releases](https://github.com/vectora-ltda/vectora/releases) and choose an
-artifact for your operating system and architecture. The current published build matrix covers:
+Open the [Vectora GitHub releases](https://github.com/vectora-company/vectora/releases) and choose
+an artifact for your operating system and architecture. The current published build matrix covers:
 
 | System  | Published architecture | Available formats           |
 | ------- | ---------------------- | --------------------------- |
@@ -31,14 +31,14 @@ release information.
 ## Run from source
 
 Use this option for development or to inspect and modify the project. Also see the
-[contribution guide](https://github.com/vectora-ltda/vectora/blob/master/CONTRIBUTING.md).
+[contribution guide](https://github.com/vectora-company/vectora/blob/master/CONTRIBUTING.md).
 
 **Requirements:** [uv](https://docs.astral.sh/uv/), Python 3.13, Node.js 26, and pnpm 11.5. On
 Linux, `dotfiles.sh` detects the distribution and prepares the toolchain and native dependencies; it
 exits on Windows/macOS.
 
 ```bash
-git clone https://github.com/vectora-ltda/vectora.git
+git clone https://github.com/vectora-company/vectora.git
 cd vectora
 
 # ./dotfiles.sh  # optional Linux toolchain setup
@@ -84,9 +84,10 @@ and [BYOK and privacy](../../security/byok-privacy) before sending data to an ex
 
 ## License and services
 
-The code is licensed under [AGPL-3.0](https://github.com/vectora-ltda/vectora/blob/master/LICENSE).
-Individual local use is free; features that depend on paid services may require an account or an
-active Pro entitlement. This does not change the code license terms.
+The code is licensed under
+[AGPL-3.0](https://github.com/vectora-company/vectora/blob/master/LICENSE). Individual local use is
+free; features that depend on paid services may require an account or an active Pro entitlement.
+This does not change the code license terms.
 
 ## Next step
 

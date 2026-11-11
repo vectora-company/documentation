@@ -34,9 +34,9 @@ context, authenticates the reconciliation decision, and only then submits a know
 result to the engine.
 
 Plan retention, SQLite file permissions, backups, and payload redaction in the host application. See
-the [lifecycle](https://github.com/vectora-ltda/engine/blob/main/docs/specs/08-run-lifecycle.md),
-[loop](https://github.com/vectora-ltda/engine/blob/main/docs/specs/11-model-tool-loop.md),
-[SQLite ledger](https://github.com/vectora-ltda/engine/blob/main/docs/specs/14-sqlite-durable-run-lifecycle.md),
+the [lifecycle](https://github.com/vectora-company/engine/blob/main/docs/specs/08-run-lifecycle.md),
+[loop](https://github.com/vectora-company/engine/blob/main/docs/specs/11-model-tool-loop.md),
+[SQLite ledger](https://github.com/vectora-company/engine/blob/main/docs/specs/14-sqlite-durable-run-lifecycle.md),
 and
-[resilient ledger](https://github.com/vectora-ltda/engine/blob/main/docs/specs/02-storage-memoria-contexto-rag.md)
+[resilient ledger](https://github.com/vectora-company/engine/blob/main/docs/specs/02-storage-memoria-contexto-rag.md)
 contracts.
