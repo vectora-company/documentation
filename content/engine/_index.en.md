@@ -7,4 +7,7 @@ cascade:
   type: docs
 ---
 
-Source code and contributions: [Engine on GitHub](https://github.com/vectora-ltda/engine).
+Documentation for the Rust runtime and its Python and TypeScript/Node bindings.
+
+Browse [getting started](getting-started/), [concepts](concepts/), [guides](guides/),
+[language references](languages/), and the [capability matrix](reference/capabilities/).
