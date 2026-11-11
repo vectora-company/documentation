@@ -1,0 +1,22 @@
+{
+  "name": "Vectora Docs",
+  "short_name": "Vectora Docs",
+  "start_url": "/",
+  "scope": "/",
+  "description": "Official documentation for Vectora Ltda. open-source projects.",
+  "display": "standalone",
+  "background_color": "#0A0F1F",
+  "theme_color": "#0A0F1F",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -6,3 +6,5 @@ weight: 5
 cascade:
   type: docs
 ---
+
+Source code and contributions: [Vext Action on GitHub](https://github.com/vectora-ltda/vext-action).

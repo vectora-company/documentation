@@ -6,3 +6,5 @@ weight: 4
 cascade:
   type: docs
 ---
+
+Código-fonte e contribuições: [Vext no GitHub](https://github.com/vectora-ltda/vext).

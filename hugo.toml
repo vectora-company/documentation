@@ -1,10 +1,11 @@
 baseURL = 'https://docs.vectora.company/'
-title = 'Vectora Documentation'
+title = 'Vectora Docs'
 defaultContentLanguage = 'en'
 defaultContentLanguageInSubdir = true
 enableEmoji = false
 enableRobotsTXT = true
 disableKinds = ['taxonomy', 'term']
+cleanDestinationDir = true
 
 [outputs]
   home = ['HTML', 'RSS']
@@ -25,7 +26,7 @@ disableKinds = ['taxonomy', 'term']
     label = 'English'
     locale = 'en-US'
     weight = 1
-    title = 'Vectora Documentation'
+    title = 'Vectora Docs'
     [languages.en.params]
       description = 'Official documentation for Vectora Ltda. open-source projects.'
     [[languages.en.menu.main]]
@@ -53,7 +54,7 @@ disableKinds = ['taxonomy', 'term']
     label = 'Português'
     locale = 'pt-BR'
     weight = 2
-    title = 'Documentação Vectora'
+    title = 'Vectora Docs'
     [languages.pt.params]
       description = 'Documentação oficial dos projetos open source da Vectora Ltda.'
     [[languages.pt.menu.main]]
@@ -81,7 +82,7 @@ disableKinds = ['taxonomy', 'term']
   displayTitle = true
   displayLogo = true
   [params.navbar.logo]
-    path = 'vectora.svg'
+    path = 'favicon.svg'
     link = '/'
 
 [params.page]
@@ -92,16 +93,16 @@ disableKinds = ['taxonomy', 'term']
 
 [params.footer]
   displayCopyright = true
-  displayPoweredBy = true
+  displayPoweredBy = false
 
 [params.theme]
   default = 'system'
   displayToggle = true
 
 [params]
-  title = 'Vectora Documentation'
+  title = 'Vectora Docs'
   description = 'Official documentation for Vectora Ltda. open-source projects.'
-  images = ['https://docs.vectora.company/vectora.svg']
+  images = ['https://docs.vectora.company/favicon.png']
 
 [params.author]
   name = 'Vectora Ltda.'

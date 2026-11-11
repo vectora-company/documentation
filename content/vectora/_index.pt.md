@@ -6,3 +6,5 @@ weight: 1
 cascade:
   type: docs
 ---
+
+Código-fonte e contribuições: [Vectora no GitHub](https://github.com/vectora-ltda/vectora).
