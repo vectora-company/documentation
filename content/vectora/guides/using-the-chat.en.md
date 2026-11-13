@@ -52,17 +52,19 @@ See [Orchestrator & Subagents](../../concepts/sub-agents) for the HITL flow and
 You can keep typing while the agent works. A message sent during a response goes into a queue shown
 above the input, and each item has a state:
 
-| State        | Meaning                                                            |
-| ------------ | ------------------------------------------------------------------ |
-| **Queued**   | Waiting; it is sent when the current response finishes.            |
-| **Sending**  | The request is on its way to the server.                           |
-| **Not sent** | The request did not reach the server. The item stays in the queue. |
+| State         | Meaning                                                                                                |
+| ------------- | ------------------------------------------------------------------------------------------------------ |
+| **Queued**    | Waiting; it is sent when the current response finishes.                                                |
+| **Sending**   | The request is on its way to the server.                                                               |
+| **Not sent**  | The request did not reach the server. The item stays in the queue.                                     |
+| **Cancelled** | You stopped the send before it reached the server. It stays in the queue and does not hold the others. |
 
 An item leaves the queue only after the server confirms it. If sending fails, use **Try again** to
 send it again: the retry reuses the same message identifier, so the message is never duplicated even
 if the first attempt did arrive. A failed item holds the ones behind it, which keeps the order;
-retry it or remove it to release the rest. You can also send a waiting item right away, which stops
-the current response first. The queue has a maximum height, so it does not cover the conversation.
+retry it or remove it to release the rest. A cancelled item can also be sent again with **Try
+again**. You can also send a waiting item right away, which stops the current response first. The
+queue has a maximum height, so it does not cover the conversation.
 
 Attachments you have not sent are kept per conversation: switching to another conversation and
 coming back restores them along with the text.
