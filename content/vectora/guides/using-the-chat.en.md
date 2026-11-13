@@ -63,8 +63,9 @@ An item leaves the queue only after the server confirms it. If sending fails, us
 send it again: the retry reuses the same message identifier, so the message is never duplicated even
 if the first attempt did arrive. A failed item holds the ones behind it, which keeps the order;
 retry it or remove it to release the rest. A cancelled item can also be sent again with **Try
-again**. You can also send a waiting item right away, which stops the current response first. The
-queue has a maximum height, so it does not cover the conversation.
+again**. A cancelled item can also be sent again with **Try again**. You can also send a waiting
+item right away, which stops the current response first. The queue has a maximum height, so it does
+not cover the conversation.
 
 Attachments you have not sent are kept per conversation: switching to another conversation and
 coming back restores them along with the text.
@@ -74,8 +75,15 @@ coming back restores them along with the text.
 Each event of a response carries a sequence number. If the connection repeats or reorders events,
 the chat ignores the extras, and after the final event it accepts nothing more, so text is never
 shown twice. The final event says why the response ended, and the message shows an indicator when it
-was interrupted or when it reached the step limit. Once the final response arrives, the input is
-free immediately, with no waiting time before the next message.
+was interrupted or when it reached the step limit.
+
+If the connection drops while the agent is still working, the chat reconnects on its own from the
+last event it received and shows what it missed. It only falls back to reloading the saved
+conversation when the server no longer has those events, for example after a restart. Once the final
+response arrives, the input is free immediately, with no waiting time before the next message.
+
+If a message you send directly does not reach the server, its text and attachments return to the
+input so you can send them again.
 
 ## Orchestrator thinking
 
