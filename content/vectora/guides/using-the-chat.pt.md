@@ -49,6 +49,35 @@ liberada como se tivesse sido aprovada.
 Veja [Orchestrator & Subagentes](../../concepts/sub-agents) para entender o HITL por trás desses
 gates e [Modelos de decisão](../decision-models) para configurar Decision Models e suas superfícies.
 
+## Mensagens enquanto o agente responde
+
+Você pode continuar digitando enquanto o agente trabalha. Uma mensagem enviada durante uma resposta
+entra numa fila exibida acima do input, e cada item tem um estado:
+
+| Estado          | Significado                                                   |
+| --------------- | ------------------------------------------------------------- |
+| **Na fila**     | Aguardando; é enviada quando a resposta atual termina.        |
+| **Enviando**    | A requisição está a caminho do servidor.                      |
+| **Não enviada** | A requisição não chegou ao servidor. O item continua na fila. |
+
+Um item só sai da fila depois que o servidor confirma. Se o envio falhar, use **Tentar de novo**
+para enviá-lo outra vez: o reenvio usa o mesmo identificador de mensagem, então a mensagem nunca é
+duplicada, mesmo que a primeira tentativa tenha chegado. Um item que falhou segura os que vêm
+depois, o que preserva a ordem; reenvie-o ou remova-o para liberar os demais. Também é possível
+enviar um item em espera na hora, o que interrompe antes a resposta atual. A fila tem altura máxima,
+para não cobrir a conversa.
+
+Os anexos ainda não enviados ficam guardados por conversa: trocar para outra conversa e voltar
+restaura os anexos junto com o texto.
+
+## Stream de resposta confiável
+
+Cada evento de uma resposta leva um número de sequência. Se a conexão repetir ou embaralhar eventos,
+o chat ignora os excedentes e, depois do evento final, não aceita mais nada, então o texto nunca
+aparece duas vezes. O evento final informa por que a resposta terminou, e a mensagem mostra um
+indicador quando ela foi interrompida ou atingiu o limite de passos. Assim que a resposta final
+chega, o input fica livre na hora, sem tempo de espera antes da próxima mensagem.
+
 ## Thinking / raciocínio do orchestrator
 
 O bloco de "pensando" mostra a decisão do orchestrator antes de agir: responder direto ou delegar

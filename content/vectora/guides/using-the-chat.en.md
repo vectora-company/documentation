@@ -47,6 +47,34 @@ human review, the action is not treated as approved.
 See [Orchestrator & Subagents](../../concepts/sub-agents) for the HITL flow and
 [Decision models](../decision-models) to configure providers and surfaces.
 
+## Messages while the agent is responding
+
+You can keep typing while the agent works. A message sent during a response goes into a queue shown
+above the input, and each item has a state:
+
+| State        | Meaning                                                            |
+| ------------ | ------------------------------------------------------------------ |
+| **Queued**   | Waiting; it is sent when the current response finishes.            |
+| **Sending**  | The request is on its way to the server.                           |
+| **Not sent** | The request did not reach the server. The item stays in the queue. |
+
+An item leaves the queue only after the server confirms it. If sending fails, use **Try again** to
+send it again: the retry reuses the same message identifier, so the message is never duplicated even
+if the first attempt did arrive. A failed item holds the ones behind it, which keeps the order;
+retry it or remove it to release the rest. You can also send a waiting item right away, which stops
+the current response first. The queue has a maximum height, so it does not cover the conversation.
+
+Attachments you have not sent are kept per conversation: switching to another conversation and
+coming back restores them along with the text.
+
+## Reliable response stream
+
+Each event of a response carries a sequence number. If the connection repeats or reorders events,
+the chat ignores the extras, and after the final event it accepts nothing more, so text is never
+shown twice. The final event says why the response ended, and the message shows an indicator when it
+was interrupted or when it reached the step limit. Once the final response arrives, the input is
+free immediately, with no waiting time before the next message.
+
 ## Orchestrator thinking
 
 The "thinking" block shows the orchestrator's decision before acting: answer directly or delegate to
