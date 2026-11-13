@@ -102,7 +102,7 @@ cleanDestinationDir = true
 [params]
   title = 'Vectora Docs'
   description = 'Official documentation for Vectora Ltda. open-source projects.'
-  images = ['https://docs.vectora.company/favicon.png']
+  images = ['https://docs.vectora.company/vectora/vectora-banner.png']
 
 [params.author]
   name = 'Vectora Ltda.'
