@@ -1,0 +1,41 @@
+{{- if .IsHome -}}
+<!doctype html>
+<html lang="{{ site.Language.Locale | default site.Language.Lang }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <title>{{ site.Title }}</title>
+    <meta name="description" content="{{ site.Params.description }}">
+    <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="alternate" hreflang="en-US" href="{{ "en/" | absURL }}">
+    <link rel="alternate" hreflang="pt-BR" href="{{ "pt/" | absURL }}">
+    <link rel="alternate" hreflang="x-default" href="{{ "en/" | absURL }}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ site.Title }}">
+    <meta property="og:title" content="{{ site.Title }}">
+    <meta property="og:description" content="{{ site.Params.description }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:image" content="{{ index site.Params.images 0 }}">
+    <meta property="og:image:alt" content="Vectora — AI-first developer assistant">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ site.Title }}">
+    <meta name="twitter:description" content="{{ site.Params.description }}">
+    <meta name="twitter:image" content="{{ index site.Params.images 0 }}">
+    <meta http-equiv="refresh" content="0; url={{ .Permalink }}">
+  </head>
+  <body>
+    <p><a href="{{ .Permalink }}">Continue to Vectora Docs</a></p>
+  </body>
+</html>
+{{- else -}}
+<!doctype html>
+<html lang="{{ site.Language.Locale | default site.Language.Lang }}">
+  <head>
+    <title>{{ .Permalink }}</title>
+    <link rel="canonical" href="{{ .Permalink }}">
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0; url={{ .Permalink }}">
+  </head>
+</html>
+{{- end -}}
