@@ -14,7 +14,8 @@ never becomes the default application for any type: it is just one more option i
 - **Documents:** PDF, Word, Excel, PowerPoint and the OpenDocument formats (ODT, ODS, ODP).
 - **Text and code:** plain text, Markdown, CSV, JSON, XML, HTML, CSS, YAML, Python, JavaScript,
   TypeScript, SQL, shell and the other languages listed in the attachment picker.
-- **Folders:** on Linux, the file manager offers Vectora for folders.
+- **Folders:** on Linux, macOS and Windows, a folder's context menu (and, on Windows, the one on a
+  folder's background) offers Vectora.
 
 ## What happens when you open
 
@@ -30,8 +31,8 @@ It also works by dragging the file onto the app icon.
 
 ## Limits
 
-- On Windows and macOS, the folder does not appear in the system context menu. Drag it onto the
-  Vectora icon.
+- On Windows, the folder menu is installed by the standard installer (NSIS), per user, and removed
+  on uninstall. The MSI package does not register it.
 - Vectora reads at most 50 MB per file when opening it this way, and each type also has its own
   attachment limit.
 

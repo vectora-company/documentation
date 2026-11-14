@@ -14,7 +14,8 @@ como anexo. Ele nunca se torna o aplicativo padrão de nenhum tipo: é só mais 
 - **Documentos:** PDF, Word, Excel, PowerPoint e os formatos OpenDocument (ODT, ODS, ODP).
 - **Texto e código:** texto simples, Markdown, CSV, JSON, XML, HTML, CSS, YAML, Python, JavaScript,
   TypeScript, SQL, shell e as demais linguagens listadas no seletor de anexos.
-- **Pastas:** no Linux, o gerenciador de arquivos oferece o Vectora para pastas.
+- **Pastas:** no Linux, no macOS e no Windows, o menu de contexto de uma pasta (e, no Windows,
+  também o do fundo de uma pasta aberta) oferece o Vectora.
 
 ## O que acontece ao abrir
 
@@ -30,8 +31,8 @@ Também funciona arrastando o arquivo sobre o ícone do app.
 
 ## Limites
 
-- No Windows e no macOS, a pasta não aparece no menu de contexto do sistema. Arraste-a sobre o ícone
-  do Vectora.
+- No Windows, o menu de pastas é instalado pelo instalador padrão (NSIS), por usuário, e removido ao
+  desinstalar. O pacote MSI não o registra.
 - O Vectora lê no máximo 50 MB por arquivo ao abri-lo desta forma, e cada tipo tem ainda o seu
   próprio limite de anexo.
 
