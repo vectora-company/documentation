@@ -17,6 +17,32 @@ destrutivos com os mesmos privilégios do próprio backend. O Sandbox existe pra
 dano aos `rw_paths`/`ro_paths` declarados de um workspace, sem abrir mão completamente do acesso a
 arquivo e terminal (isso anularia o propósito de um agente de código autônomo).
 
+O sandbox reduz acidentes e o impacto de um agente fiel mas falível; não é uma fronteira contra um
+atacante determinado que explore o kernel, o runtime ou uma vulnerabilidade do host. Para executar
+código deliberadamente hostil, use uma máquina virtual descartável sem credenciais nem dados do
+host.
+
+## Estado por plataforma e backend
+
+As capacidades abaixo descrevem o que o código atual aplica. **Parcial** significa que uma dimensão
+importante não está isolada ou depende do host; não interprete esse estado como equivalente a um
+jail Linux completo.
+
+| Plataforma ou backend                    | Estado e limites conhecidos                                                                                                                                                                                                                                                            |
+| ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Linux local (`bwrap`)                    | Namespaces de filesystem e processo, ambiente limpo e rede `off` ou filtrada pelo proxy. Seccomp e Landlock dependem do suporte instalado; a tela marca a dimensão como parcial quando não são aplicados.                                                                              |
+| Windows com WSL2 e `bwrap`               | O worker roda dentro da distro e usa os namespaces do `bwrap`; a rede filtrada pelo proxy do host não está disponível e fica aberta quando solicitada.                                                                                                                                 |
+| Windows sem WSL2 elegível ou sem `bwrap` | Modo soft: ambiente reduzido e Job Object, sem isolamento de filesystem nem filtro de rede. O HITL não trata esse modo como isolamento efetivo.                                                                                                                                        |
+| macOS (`sandbox-exec`, execução pontual) | Perfil Seatbelt limita filesystem e processo. Não há seccomp nem Landlock; a rede fica aberta ou é bloqueada, sem allowlist de destinos. `sandbox-exec` é uma interface legada da Apple; o worker persistente do workspace ainda depende de `bwrap` e não tem suporte nativo no macOS. |
+| Docker                                   | Container com capabilities removidas, `no-new-privileges` e `/tmp` limitado; fora de `lockdown`, a rede não passa pelo filtro de destinos. `lockdown` usa raiz somente leitura e rede desligada. Limites de CPU, memória e processos dependem de cgroups.                              |
+| Singularity/Apptainer                    | Container contido sem herdar o home do host; fora de `lockdown`, a rede não passa pelo filtro de destinos. `lockdown` solicita rede isolada. Não fornece o proxy CONNECT com allowlist do backend Linux local.                                                                         |
+| SSH                                      | Executa no host remoto configurado. O Vectora não aplica nesse host os namespaces, a política de filesystem ou o filtro de egress do backend local.                                                                                                                                    |
+| Modal                                    | Execução cloud isolada e com limites de CPU e memória, mas o diretório do workspace local ainda não é enviado ao sandbox. Não espere que comandos acessem os arquivos locais do projeto nesse backend.                                                                                 |
+
+Use **Configurações → Sandbox** para conferir o estado efetivo do workspace e as dimensões
+disponíveis no backend ativo. Uma capacidade não listada como efetiva deve ser tratada como
+indisponível para decisões de segurança.
+
 ## Ativação por workspace
 
 Se o workspace **não tem** `vectora.toml` e você não definiu uma política, o Vectora liga o sandbox

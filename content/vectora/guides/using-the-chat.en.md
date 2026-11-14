@@ -13,6 +13,17 @@ to bring specific content into context without having to describe it.
 Only shows providers with a configured API key — Google Gemini, OpenAI, Anthropic, Cohere, or local
 Ollama. Switching models mid-conversation doesn't lose history.
 
+## Conversation list and count
+
+The sidebar first loads the newest page of conversations. When more results exist, **Load more**
+shows how many remain and fetches the next page. Ordering uses activity, pin status, and the
+conversation ID as a tie-breaker; it does not rely on positions that shift when a conversation gets
+a new message. If a conversation moves between pages, the client removes duplicates.
+
+Conversations with no messages are omitted from the server's default list and count. The count and
+list use the same mode and filters, so the remaining number matches the conversations that can still
+be loaded. The open empty conversation remains represented as **New session** in the sidebar.
+
 ## Permission modes
 
 Control how automatically the agent acts before asking for your approval:
@@ -63,9 +74,8 @@ An item leaves the queue only after the server confirms it. If sending fails, us
 send it again: the retry reuses the same message identifier, so the message is never duplicated even
 if the first attempt did arrive. A failed item holds the ones behind it, which keeps the order;
 retry it or remove it to release the rest. A cancelled item can also be sent again with **Try
-again**. A cancelled item can also be sent again with **Try again**. You can also send a waiting
-item right away, which stops the current response first. The queue has a maximum height, so it does
-not cover the conversation.
+again**. You can also send a waiting item right away, which stops the current response first. The
+queue has a maximum height, so it does not cover the conversation.
 
 Attachments you have not sent are kept per conversation: switching to another conversation and
 coming back restores them along with the text.
