@@ -87,8 +87,10 @@ integração depende da configuração.
 Grafo de dependências e conhecimento do workspace — veja
 [Context Graph](../../concepts/context-graph) pra como ele é construído. Aqui você aciona o build,
 acompanha o progresso por estágio (AST → semântico → concluído), e navega god nodes + perguntas
-sugeridas. Depois do build, use **Exportar** para baixar o grafo em GraphML, Cypher ou Obsidian
-Canvas. O filtro de comunidades permite focar partes do grafo sem alterar os dados salvos.
+sugeridas. Depois do build, use **Exportar** para baixar o grafo em GraphML, Cypher, Obsidian
+Canvas, SVG ou vault Obsidian em ZIP. Você também pode configurar um destino FalkorDB; o envio só
+começa após confirmação explícita e segue a política de egress do workspace. O filtro de comunidades
+permite focar partes do grafo sem alterar os dados salvos.
 
 ## Janelas flutuantes
 

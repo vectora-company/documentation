@@ -48,6 +48,20 @@ Enquanto o grafo constrói, cada arquivo mostra um indicador de estágio:
 | Semântico | roxo `#b66dff` / roxo `#8957e5`       | extração por LLM em andamento   |
 | Concluído | verde `#5ec26a` / verde `#2da44e`     | arquivo processado              |
 
+## Exportação e destino remoto
+
+A aba permite baixar GraphML, Cypher, Canvas do Obsidian, SVG e um vault Obsidian em ZIP. SVG e
+vault têm limites próprios de tamanho para evitar exportações excessivas.
+
+Também é possível configurar uma instância FalkorDB e enviar o grafo após uma confirmação que
+identifica o host e as quantidades de nós e arestas. O envio usa TLS, valida o destino contra a
+política de egress do workspace e não acontece ao abrir a aba. O host, a porta e o nome do grafo
+ficam nas preferências locais; usuário e senha ficam no cofre criptografado e não são devolvidos
+pela API. A política do workspace precisa permitir o host e a porta configurados.
+
+O grafo pode conter nomes e conteúdo derivados do repositório. Revise o destino antes de confirmar a
+transferência.
+
 ## Veja também
 
 - [RAG Híbrido](../rag) — recuperação por similaridade, complementar ao grafo

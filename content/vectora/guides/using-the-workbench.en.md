@@ -92,8 +92,10 @@ configuration.
 The workspace's dependency and knowledge graph — see [Context Graph](../../concepts/context-graph)
 for how it's built. Here you trigger the build, track progress by stage (AST → semantic → done), and
 browse god nodes plus suggested questions. Once the build is complete, use **Export** to download
-the graph as GraphML, Cypher, or Obsidian Canvas. The community filter lets you focus on parts of
-the graph without changing the saved data.
+the graph as GraphML, Cypher, Obsidian Canvas, SVG, or an Obsidian vault ZIP. You can also configure
+a FalkorDB destination; sending starts only after explicit confirmation and follows the workspace
+egress policy. The community filter lets you focus on parts of the graph without changing the saved
+data.
 
 ### Library
 
