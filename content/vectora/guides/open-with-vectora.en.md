@@ -26,13 +26,12 @@ never becomes the default application for any type: it is just one more option i
   terminal and git is still your action, in the workspace trust dialog.
 - If Vectora is already open, the file goes to the existing window, without starting a second app.
 
-It also works by dragging the file onto the app icon and from the command line
-(`vectora path/to/file`).
+It also works by dragging the file onto the app icon.
 
 ## Limits
 
 - On Windows and macOS, the folder does not appear in the system context menu. Drag it onto the
-  Vectora icon or open it from the command line.
+  Vectora icon.
 - Vectora reads at most 50 MB per file when opening it this way, and each type also has its own
   attachment limit.
 

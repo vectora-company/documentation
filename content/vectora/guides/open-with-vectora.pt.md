@@ -26,8 +26,7 @@ como anexo. Ele nunca se torna o aplicativo padrão de nenhum tipo: é só mais 
   git continua sendo uma ação sua, no diálogo de confiança do workspace.
 - Se o Vectora já está aberto, o arquivo vai para a janela que existe, sem abrir um segundo app.
 
-Também funciona arrastando o arquivo sobre o ícone do app e pela linha de comando
-(`vectora caminho/do/arquivo`).
+Também funciona arrastando o arquivo sobre o ícone do app.
 
 ## Limites
 
