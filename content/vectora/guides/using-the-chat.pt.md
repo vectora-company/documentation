@@ -87,6 +87,18 @@ na hora, sem tempo de espera antes da próxima mensagem.
 Se uma mensagem enviada diretamente não chegar ao servidor, o texto e os anexos voltam ao input para
 você enviar de novo.
 
+Em conversas longas, o chat carrega as mensagens antigas conforme você sobe a tela. Cada página é
+pedida a partir da mensagem mais antiga que você já tem, e não por posição, então mensagens novas
+chegando no fim da conversa nunca repetem nem pulam mensagens do histórico. Se a mensagem de
+referência tiver sido removida, por exemplo ao voltar a conversa para um ponto anterior, o chat
+refaz a página por posição.
+
+Quando a resposta demora mais de 15 segundos e a janela está oculta, o sistema mostra um alerta de
+resposta pronta, no máximo uma vez por mensagem: reenviar da fila ou reconectar o stream não repete
+o alerta. Sem permissão de notificações do sistema o alerta não aparece, e isso não impede que ele
+apareça depois, se você conceder a permissão. Alertas de push com o app fechado dependem da
+plataforma e ainda não estão disponíveis.
+
 ## Thinking / raciocínio do orchestrator
 
 O bloco de "pensando" mostra a decisão do orchestrator antes de agir: responder direto ou delegar

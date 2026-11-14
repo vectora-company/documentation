@@ -85,6 +85,17 @@ response arrives, the input is free immediately, with no waiting time before the
 If a message you send directly does not reach the server, its text and attachments return to the
 input so you can send them again.
 
+In long conversations, the chat loads older messages as you scroll up. Each page is requested from
+the oldest message you already have, not by position, so new messages arriving at the end of the
+conversation never repeat or skip history. If that reference message was removed, for example when
+you rewind the conversation, the chat reloads the page by position.
+
+When a reply takes more than 15 seconds and the window is hidden, the system shows a reply-ready
+alert, at most once per message: resending from the queue or reconnecting the stream does not repeat
+it. Without system notification permission the alert does not appear, and that does not stop it from
+appearing later if you grant the permission. Push alerts with the app closed depend on the platform
+and are not available yet.
+
 ## Orchestrator thinking
 
 The "thinking" block shows the orchestrator's decision before acting: answer directly or delegate to
