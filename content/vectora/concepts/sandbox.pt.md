@@ -105,6 +105,25 @@ resolver o nome de novo, contra DNS rebinding) e registra cada decisão. HTTP se
 fica aberta e o Vectora registra o aviso. Detalhes da política de egress das ferramentas em
 [Políticas de egress](../../guides/egress-policies).
 
+### Credenciais vinculadas ao destino
+
+No Linux, com backend local `bwrap` e `network = "filtered"`, **Configurações → Sandbox** permite
+vincular uma credencial a um host HTTPS exato que já esteja em `allow_hosts`. O valor fica no cofre
+do Vectora; a política confiável do workspace guarda apenas nome, host, cabeçalho e prefixo. O jail
+recebe um placeholder na variável de ambiente escolhida, nunca o valor real. Só para esse host, o
+proxy de saída termina o TLS, remove qualquer cópia do cabeçalho enviada pelo processo e injeta o
+valor do cofre antes de abrir outra conexão TLS verificada para o IP de destino já fixado. Os demais
+hosts continuam em túneis TLS ponta a ponta. A auditoria registra o destino e o nome da credencial,
+nunca o valor.
+
+Esse recurso exige que o jail confie no certificado público da CA do proxy, gerado por workspace. A
+chave privada da CA fica no backend e não pode ser usada pelo jail para assinar certificados.
+Ferramentas que fixam o certificado do destino falham para um host vinculado; use uma ferramenta com
+validação normal das CAs do sistema. A interceptação TLS aceita HTTP/1.1 na porta 443. Credenciais
+não estão disponíveis no WSL2, macOS, isolamento soft, outros backends de sandbox, nem com a rede
+aberta ou desligada; a tela de configurações recusa salvar um vínculo nessas condições. Mantenha o
+host específico e conceda somente o cabeçalho necessário ao destino.
+
 ## Como funciona: um worker por workspace
 
 Em vez de criar um processo sandboxed novo a cada chamada de tool, o Vectora mantém um único worker

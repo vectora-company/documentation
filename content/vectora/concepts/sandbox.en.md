@@ -107,6 +107,25 @@ every decision. Plain HTTP is refused.
 stays open and Vectora logs a warning. Egress policy details for tools are in
 [Egress policies](../../guides/egress-policies).
 
+### Destination-bound credentials
+
+On Linux with the local `bwrap` backend and `network = "filtered"`, **Settings → Sandbox** can bind
+a credential to an exact HTTPS host that is already in `allow_hosts`. The value is saved in the
+Vectora vault; the trusted workspace policy stores only its name, host, header and prefix. The jail
+receives a placeholder in the named environment variable, never the real value. For that exact host,
+the egress proxy terminates TLS, removes any caller-supplied copy of the configured header, and adds
+the vault value before opening a separately verified TLS connection to the pinned destination IP.
+Other hosts remain end-to-end TLS tunnels. The audit records the destination and credential name,
+never the value.
+
+This feature requires the jail to trust the proxy's per-workspace public CA certificate. The CA
+private key stays in the backend, and the jail cannot use it to sign certificates. Tools that pin
+the destination's certificate will fail for a bound host; use a tool with normal system CA
+verification. TLS interception currently supports HTTP/1.1 on port 443. Credentials are unavailable
+on WSL2, macOS, soft isolation, other sandbox backends, and unfiltered or disabled network modes;
+the settings screen refuses to save a binding in those configurations. Keep the host narrow and
+grant only the header needed by the destination.
+
 ## How it works: one worker per workspace
 
 Instead of spawning a new sandboxed process for every tool call, Vectora keeps a single persistent
