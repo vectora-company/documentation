@@ -31,7 +31,7 @@ Também funciona arrastando o arquivo sobre o ícone do app.
 ## Limites
 
 - No Windows e no macOS, a pasta não aparece no menu de contexto do sistema. Arraste-a sobre o ícone
-  do Vectora ou abra pela linha de comando.
+  do Vectora.
 - O Vectora lê no máximo 50 MB por arquivo ao abri-lo desta forma, e cada tipo tem ainda o seu
   próprio limite de anexo.
 
