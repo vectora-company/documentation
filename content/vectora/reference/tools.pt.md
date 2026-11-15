@@ -7,19 +7,19 @@ O Vectora oferece ferramentas nativas organizadas por categoria, além de conex�
 configurados pelo usuário. A lista e a disponibilidade de ferramentas podem variar conforme versão,
 permissões e integrações habilitadas.
 
-| Categoria         | Ferramentas                                                                                                  |
-| ----------------- | ------------------------------------------------------------------------------------------------------------ |
-| **Arquivos**      | `file_read`, `file_edit`, `file_write`, `grep`, `list_dir`, `terminal`, `create_artifact`                    |
-| **Git**           | Operações para status, log, diff, branch, checkout, commit, push, pull, stage/unstage, stash, merge, compare |
-| **GitHub**        | `gh_issue_create/list/view/comment`, `gh_pr_create/list/view/merge` (via `gh` CLI)                           |
-| **Web**           | `web_search`, `web_fetch` + extração/crawl                                                                   |
-| **RAG**           | `vector_search`, `embedding`, `ingest_docs`, `manage_retriever`                                              |
-| **Context Graph** | `build_knowledge_graph`, `graph_query`, `graph_explain`, `graph_path`, `graph_update`, `graph_affected`      |
-| **Memória**       | `save_memory`, `get_memory`, `delete_memory`                                                                 |
-| **Workspace**     | `workspace_list`, `workspace_describe`, `bucket_summary`                                                     |
-| **Integrações**   | Jira, Slack, Linear, Google Drive, Gmail, Notion (opcionais, via OAuth/API key por workspace)                |
-| **Utilitárias**   | `time_*`, `hash_*`, `base64_*`, `regex_test`, `json_query`, `jwt_decode`, `http_request`                     |
-| **MCP**           | `call_mcp_tool` — delega pra MCP servers de terceiros configurados pelo usuário                              |
+| Categoria         | Ferramentas                                                                                                                                      |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Arquivos**      | `file_read`, `file_edit`, `file_write`, `grep`, `list_dir`, `terminal`, `create_artifact`                                                        |
+| **Git**           | Operações para status, log, diff, branch, checkout, commit, push, pull, stage/unstage, stash, merge, compare                                     |
+| **GitHub**        | `gh_issue_create/list/view/comment`, `gh_pr_create/list/view/merge` (via `gh` CLI)                                                               |
+| **Web**           | `web_search`, `web_fetch` + extração/crawl                                                                                                       |
+| **RAG**           | `vector_search`, `embedding`, `ingest_docs`, `manage_retriever`                                                                                  |
+| **Context Graph** | `build_knowledge_graph`, `graph_query`, `graph_explain`, `graph_path`, `graph_update`, `graph_affected`, `graph_cluster`, `graph_resolve_symbol` |
+| **Memória**       | `save_memory`, `get_memory`, `delete_memory`                                                                                                     |
+| **Workspace**     | `workspace_list`, `workspace_describe`, `bucket_summary`                                                                                         |
+| **Integrações**   | Jira, Slack, Linear, Google Drive, Gmail, Notion (opcionais, via OAuth/API key por workspace)                                                    |
+| **Utilitárias**   | `time_*`, `hash_*`, `base64_*`, `regex_test`, `json_query`, `jwt_decode`, `http_request`                                                         |
+| **MCP**           | `call_mcp_tool` — delega pra MCP servers de terceiros configurados pelo usuário                                                                  |
 
 ## Habilitando/desabilitando tools
 

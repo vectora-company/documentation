@@ -48,6 +48,17 @@ Enquanto o grafo constrói, cada arquivo mostra um indicador de estágio:
 | Semântico | roxo `#b66dff` / roxo `#8957e5`       | extração por LLM em andamento   |
 | Concluído | verde `#5ec26a` / verde `#2da44e`     | arquivo processado              |
 
+## Encontrar símbolos
+
+Depois do build, digite o nome exato de uma função ou classe na busca do viewer e pressione Enter ou
+selecione **Resolver símbolo**. A busca de texto continua destacando correspondências no canvas; a
+resolução consulta o grafo e mostra definições de código exatas. Se o mesmo nome existir em mais de
+um arquivo, escolha o candidato pelo caminho e pela localização. A seleção abre o nó no canvas e
+revela sua comunidade, se houver. O Vectora não escolhe por você quando há ambiguidade.
+
+O agente também pode usar `graph_resolve_symbol` para consultar o grafo do workspace. A ferramenta
+retorna candidatos limitados e não altera os arquivos salvos do grafo.
+
 ## Exportação e destino remoto
 
 A aba permite baixar GraphML, Cypher, Canvas do Obsidian, SVG e um vault Obsidian em ZIP. SVG e

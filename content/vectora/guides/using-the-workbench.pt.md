@@ -90,7 +90,10 @@ acompanha o progresso por estágio (AST → semântico → concluído), e navega
 sugeridas. Depois do build, use **Exportar** para baixar o grafo em GraphML, Cypher, Obsidian
 Canvas, SVG ou vault Obsidian em ZIP. Você também pode configurar um destino FalkorDB; o envio só
 começa após confirmação explícita e segue a política de egress do workspace. O filtro de comunidades
-permite focar partes do grafo sem alterar os dados salvos.
+permite focar partes do grafo sem alterar os dados salvos. Para localizar uma função ou classe,
+informe o nome exato na busca e pressione Enter: os candidatos aparecem por arquivo e localização.
+Selecione um para abrir o nó e revelar sua comunidade, se houver. Para nomes duplicados, escolha o
+arquivo correto; o viewer não tenta adivinhar.
 
 ## Janelas flutuantes
 

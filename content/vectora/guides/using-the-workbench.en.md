@@ -95,7 +95,9 @@ browse god nodes plus suggested questions. Once the build is complete, use **Exp
 the graph as GraphML, Cypher, Obsidian Canvas, SVG, or an Obsidian vault ZIP. You can also configure
 a FalkorDB destination; sending starts only after explicit confirmation and follows the workspace
 egress policy. The community filter lets you focus on parts of the graph without changing the saved
-data.
+data. To find a function or class, enter its exact name in search and press Enter. Candidates appear
+with their file and location. Select one to open the node and reveal its community, if present. For
+duplicate names, choose the right file; the viewer does not guess.
 
 ### Library
 

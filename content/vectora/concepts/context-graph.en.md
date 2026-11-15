@@ -48,6 +48,17 @@ While the graph builds, each file shows a stage indicator:
 | Semantic | purple `#b66dff` / purple `#8957e5`   | LLM extraction in progress     |
 | Done     | green `#5ec26a` / green `#2da44e`     | file processed                 |
 
+## Finding symbols
+
+After the graph is built, enter the exact name of a function or class in the viewer search and press
+Enter or select **Resolve symbol**. Text search still highlights matches on the canvas; symbol
+resolution queries exact code definitions in the graph. If the same name appears in multiple files,
+choose a candidate by its path and location. Selecting one opens the node on the canvas and reveals
+its community, if present. Vectora does not choose for you when the result is ambiguous.
+
+The agent can also use `graph_resolve_symbol` to query the workspace graph. The tool returns a
+bounded list of candidates and does not modify the saved graph files.
+
 ## Export and remote destination
 
 The tab can download GraphML, Cypher, Obsidian Canvas, SVG, and an Obsidian vault as a ZIP. SVG and
