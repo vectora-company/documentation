@@ -35,6 +35,11 @@ Duas sub-abas: **Mudanças** (arquivos modificados/staged/untracked, com patch e
 stage/unstage por arquivo) e **Histórico** (log de commits, clique mostra o diff completo). Modais
 dedicados pra Stash, Worktrees e criação de PR. Branch selector e botão de sync na toolbar.
 
+Se o workspace é uma pasta com vários repositórios, ou um repositório com submódulos, um seletor no
+cabeçalho lista os repositórios de dentro dele (até 4 níveis) e você escolhe qual mostrar. A escolha
+fica em `[git] repo` do `vectora.toml` do workspace, com caminho relativo, e vale para status,
+branches, diff e commits. Gravar exige que o workspace seja confiável.
+
 ### Plan
 
 Lista os artifacts gerados pelo agente na sessão (planos, specs, guias em markdown, via a tool
