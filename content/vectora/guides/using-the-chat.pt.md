@@ -13,6 +13,19 @@ O input do chat aceita texto, arquivos arrastados (drag-and-drop), colar imagens
 Mostra só os providers com chave de API configurada — Google Gemini, OpenAI, Anthropic, Cohere, ou
 Ollama local. Trocar de modelo no meio de uma conversa não perde o histórico.
 
+## Lista e contagem de conversas
+
+A barra lateral carrega primeiro a página mais recente de conversas. Quando há mais resultados,
+**Carregar mais** informa quantos ainda faltam e busca a próxima página. A ordem considera
+atividade, fixação e identificador da conversa como desempate, sem depender de posições que mudam
+quando uma conversa recebe uma mensagem. Se uma conversa mudar de posição entre páginas, o cliente
+remove duplicatas.
+
+Conversas sem mensagens ficam fora da listagem e da contagem padrão do servidor. A contagem e a
+listagem usam o mesmo modo e os mesmos filtros, para que o número restante corresponda às conversas
+que ainda podem ser carregadas. A sessão vazia que está aberta continua representada como **Nova
+sessão** na barra lateral.
+
 ## Modos de permissão
 
 Controlam o quão automático o agente age antes de pedir sua aprovação:

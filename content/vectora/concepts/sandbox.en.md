@@ -17,6 +17,31 @@ commands with the same privileges as the backend itself. Sandbox exists to bound
 to a workspace's declared `rw_paths`/`ro_paths`, without giving up file and terminal access entirely
 (that would defeat the point of an autonomous coding agent).
 
+Sandbox reduces accidents and the impact of a faithful but fallible agent; it is not a boundary
+against a determined attacker exploiting the kernel, runtime, or a host vulnerability. To run
+deliberately hostile code, use a disposable virtual machine with no host credentials or data.
+
+## Status by platform and backend
+
+The capabilities below describe what the current code applies. **Partial** means an important
+dimension is not isolated or depends on the host; do not treat it as equivalent to a full Linux
+jail.
+
+| Platform or backend                       | Status and known limits                                                                                                                                                                                                                                                                       |
+| ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Local Linux (`bwrap`)                     | Filesystem and process namespaces, clean environment, and network set to `off` or filtered through the proxy. Seccomp and Landlock depend on installed support; the status screen marks a dimension partial when they are unavailable.                                                        |
+| Windows with WSL2 and `bwrap`             | The worker runs inside the distro with `bwrap` namespaces; filtered networking through the host proxy is unavailable and becomes open when requested.                                                                                                                                         |
+| Windows without eligible WSL2 or `bwrap`  | Soft mode: reduced environment and a Job Object, without filesystem isolation or network filtering. HITL does not treat this as effective isolation.                                                                                                                                          |
+| macOS (`sandbox-exec`, one-shot commands) | A Seatbelt profile limits filesystem and process access. There is no seccomp or Landlock; networking is open or blocked, with no destination allowlist. `sandbox-exec` is a legacy Apple interface; the persistent workspace worker still depends on `bwrap` and has no native macOS support. |
+| Docker                                    | Container with capabilities dropped, `no-new-privileges`, and a size-limited `/tmp`; outside `lockdown`, network traffic does not pass through a destination filter. `lockdown` also uses a read-only root and disables networking. CPU, memory, and process limits depend on cgroups.        |
+| Singularity/Apptainer                     | Contained execution without inheriting the host home; outside `lockdown`, network traffic does not pass through a destination filter. `lockdown` requests isolated networking. It does not provide the local Linux backend's CONNECT allowlist proxy.                                         |
+| SSH                                       | Runs on the configured remote host. Vectora does not apply the local backend's namespaces, filesystem policy, or egress filter on that host.                                                                                                                                                  |
+| Modal                                     | Isolated cloud execution with CPU and memory limits, but the local workspace directory is not uploaded to the sandbox yet. Do not expect commands to access local project files with this backend.                                                                                            |
+
+Use **Settings → Sandbox** to check the workspace's effective status and the dimensions available
+for its active backend. Treat any capability not shown as effective as unavailable for security
+decisions.
+
 ## Activation per workspace
 
 If the workspace has **no** `vectora.toml` and you have not set a policy, Vectora turns the sandbox
@@ -106,6 +131,25 @@ every decision. Plain HTTP is refused.
 `lockdown = true` always cuts the network. On WSL2 the distro cannot reach the proxy, so the network
 stays open and Vectora logs a warning. Egress policy details for tools are in
 [Egress policies](../../guides/egress-policies).
+
+### Destination-bound credentials
+
+On Linux with the local `bwrap` backend and `network = "filtered"`, **Settings → Sandbox** can bind
+a credential to an exact HTTPS host that is already in `allow_hosts`. The value is saved in the
+Vectora vault; the trusted workspace policy stores only its name, host, header and prefix. The jail
+receives a placeholder in the named environment variable, never the real value. For that exact host,
+the egress proxy terminates TLS, removes any caller-supplied copy of the configured header, and adds
+the vault value before opening a separately verified TLS connection to the pinned destination IP.
+Other hosts remain end-to-end TLS tunnels. The audit records the destination and credential name,
+never the value.
+
+This feature requires the jail to trust the proxy's per-workspace public CA certificate. The CA
+private key stays in the backend, and the jail cannot use it to sign certificates. Tools that pin
+the destination's certificate will fail for a bound host; use a tool with normal system CA
+verification. TLS interception currently supports HTTP/1.1 on port 443. Credentials are unavailable
+on WSL2, macOS, soft isolation, other sandbox backends, and unfiltered or disabled network modes;
+the settings screen refuses to save a binding in those configurations. Keep the host narrow and
+grant only the header needed by the destination.
 
 ## How it works: one worker per workspace
 
