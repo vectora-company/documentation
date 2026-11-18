@@ -26,6 +26,25 @@ vectora [comando] [opções]
 | `--host <host>`                          | `0.0.0.0` | host de escuta                                   |
 | `--port <n>`                             | `8080`    | porta                                            |
 | `--ssl-certfile` / `--ssl-keyfile <pem>` | —         | serve em `https://`                              |
+| `--no-services`                          | —         | inicia sem o Vectora Services nesta execução     |
+
+`vectora web` aceita as mesmas opções.
+
+### Sem o Vectora Services
+
+`--no-services` vale só para a execução e é herdada pelos processos filhos (a variável
+`VECTORA_NO_SERVICES`); não altera as configurações salvas.
+
+- O gateway não conecta, e o status dele mostra "desligado nesta execução".
+- A licença não é validada nem reescrita: segue o cache local ainda válido ou o plano gratuito.
+- Os catálogos de MCP e skills usam só o cache local.
+- Login com a conta, OAuth centralizado, portal de cobrança e verificação do token respondem 503
+  ("Services desabilitado nesta execução") antes de qualquer acesso à rede, e a interface avisa em
+  vez de mostrar um erro de rede.
+- As atualizações do aplicativo desktop também não consultam o servidor.
+
+Os provedores de modelo que você configurou continuam funcionando: a opção desliga o Services, não a
+sua conexão com eles.
 
 ## `vectora config`
 

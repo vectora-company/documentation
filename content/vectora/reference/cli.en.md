@@ -26,6 +26,26 @@ vectora [command] [options]
 | `--host <host>`                          | `0.0.0.0` | listen host                                        |
 | `--port <n>`                             | `8080`    | port                                               |
 | `--ssl-certfile` / `--ssl-keyfile <pem>` | —         | serve over `https://`                              |
+| `--no-services`                          | —         | starts without Vectora Services for this run       |
+
+`vectora web` accepts the same options.
+
+### Without Vectora Services
+
+`--no-services` applies to the run only and is inherited by child processes (the
+`VECTORA_NO_SERVICES` variable); it does not change saved settings.
+
+- The gateway does not connect, and its status shows "off in this run".
+- The license is neither validated nor rewritten: it follows the still-valid local cache or the free
+  plan.
+- The MCP and skills catalogs use the local cache only.
+- Account login, centralized OAuth, the billing portal and token verification answer 503 ("Services
+  disabled in this run") before any network access, and the interface says so instead of showing a
+  network error.
+- Desktop app updates do not query the server either.
+
+The model providers you configured keep working: the option turns off Services, not your connection
+to them.
 
 ## `vectora config`
 
